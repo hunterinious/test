@@ -13,7 +13,7 @@ First you need to go to the directory where the files are located
 Next
 - type ruby test.rb
 
-#Authors
+# Authors
 Nerodenko Vladyslav
 
 
