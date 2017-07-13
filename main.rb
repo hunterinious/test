@@ -9,16 +9,14 @@ require_relative "test"
 require_relative "result_printer"
 require_relative "filereader"
 
-puts "Ваш уровень общительности. Тест поможет определить ваш уровень " \
-  "коммуникабельности. Версия 0.2. (c) goodprogrammer.ru\n\n"
+puts "Ваш уровень общительности. Тест поможет определить ваш уровень коммуникабельности.\n\n"
 
-filereader = FileReader.new
-test = Test.new(filereader.read_from_file("/data/questions.txt"))
-result_printer = ResultPrinter.new(filereader.read_from_file("/data/answers.txt"))
+file_reader = FileReader.new
+test = Test.new(file_reader.read_from_file("/data/questions.txt"))
+result_printer = ResultPrinter.new(file_reader.read_from_file("/data/answers.txt"))
 
+# Начинаем тест
 test.do_test
-# Пока не все вопросы заданы, задем следующий вопрос
-
 # Вводим результаты теста методом print_result у объекта класса ResultPrinter
 result_printer.print_res(test)
 
