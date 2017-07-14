@@ -7,7 +7,7 @@
 
 require_relative "test"
 require_relative "result_printer"
-require_relative "filereader"
+require_relative "file_reader"
 
 puts "Ваш уровень общительности. Тест поможет определить ваш уровень коммуникабельности.\n\n"
 
@@ -18,5 +18,5 @@ result_printer = ResultPrinter.new(file_reader.read_from_file("/data/answers.txt
 # Начинаем тест
 test.do_test
 # Вводим результаты теста методом print_result у объекта класса ResultPrinter
-result_printer.print_res(test)
+result_printer.print_result(test)
 
